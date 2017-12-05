@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <h2>Welcome to Ionic!</h2>
+    <ion-grid swipeAll (swipeleft)="swipeLeft($event)">
+        <ion-row>
+            <ion-col>
+                <p>Swipe Left</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid swipeAll (swipedown)="swipeDown($event)">
+        <ion-row>
+            <ion-col>
+                <p>Swipe Down</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+  <button ion-button (click)="logout()">Log out</button>
 </ion-content>

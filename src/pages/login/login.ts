@@ -5,25 +5,18 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class HomePage {
+export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthServiceProvider) {
   }
 
-  logout() {
-    console.log('home.ts logout');
-    this.authService.logout();
-  }
-
-  swipeLeft(event: any) {
-    console.log("Swipe Left", event);
-  }
-
-  swipeDown(event: any) {
-    console.log('Swipe Down', event);
+   login() {
+    console.log('login.ts login');
+    let credentials = {username: 'foo', password: 'bar'}; // use real credentials from some form here
+    this.authService.login(credentials);
   }
 
 }
